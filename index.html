@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hope Care Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome for mobile menu icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Hope Care Services Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="search-box">
+          <input type="text" placeholder="Search..." id="searchInput" />
+          <button onclick="searchSite()">🔍</button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="slides">
+      <div class="slide active">
+        <img src="images/hero3.png" alt="Manpower Outsourcing" />
+        <div class="slide-content">
+          <h1>Empowering Government Projects</h1>
+          <p>Reliable manpower and outsourcing solutions for government sectors.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/hero2.png" alt="Solar Energy Solutions" />
+        <div class="slide-content">
+          <h1>Sustainable Solar Energy</h1>
+          <p>End-to-end solar solutions for public institutions and rural areas.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/hero1.png" alt="Audit & Compliance" />
+        <div class="slide-content">
+          <h1>Transparent Audits & Compliance</h1>
+          <p>Accurate social and financial audits for government agencies.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+      <button class="next-btn" onclick="changeSlide(1)">❯</button>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <h2>Our Services</h2>
+    <div class="grid-container">
+      <div class="card">
+        <img src="images/one.png" alt="Manpower Supply" />
+        <h3>Manpower Supply</h3>
+        <p>Skilled, semi-skilled, and unskilled labor for government projects.</p>
+      </div>
+      <div class="card">
+        <img src="images/two.png" alt="Contract Staffing" />
+        <h3>Contract Staffing</h3>
+        <p>Short-term and project-based staffing for departments.</p>
+      </div>
+      <div class="card">
+        <img src="images/three.png" alt="Facility Management" />
+        <h3>Facility Management</h3>
+        <p>Housekeeping, security, drivers, office support staff.</p>
+      </div>
+      <div class="card">
+        <img src="images/four.jpg" alt="IT Manpower" />
+        <h3>IT & Technical Staff</h3>
+        <p>IT professionals for government IT projects and systems.</p>
+      </div>
+      <div class="card">
+        <img src="images/five.jpg" alt="Event Support" />
+        <h3>Event Manpower</h3>
+        <p>Support staff for government events and programs.</p>
+      </div>
+      <div class="card">
+        <img src="images/six.webp" alt="Recruitment" />
+        <h3>Recruitment Solutions</h3>
+        <p>End-to-end recruitment for government agencies.</p>
+      </div>
+      <div class="card">
+        <img src="images/seven.webp" alt="Payroll & HR" />
+        <h3>HR & Payroll Outsourcing</h3>
+        <p>Payroll management and HR support for contracts.</p>
+      </div>
+      <div class="card">
+        <img src="images/eight.webp" alt="Training Programs" />
+        <h3>Training & Skill Development</h3>
+        <p>Customized training for government employees.</p>
+      </div>
+      <div class="card">
+        <img src="images/nine.webp" alt="Solar Energy" />
+        <h3>Solar Energy Solutions</h3>
+        <p>Rooftop solar, O&M, street lighting, rural electrification.</p>
+      </div>
+      <div class="card">
+        <img src="images/ten.jpg" alt="Data Entry and Back-office support" />
+        <h3>Data Entry and Back-office support</h3>
+        <p>Administrative roles that handle a company's internal, non-client-facing operations.</p>
+      </div>
+      <div class="card">
+        <img src="images/eleven.jpg" alt="Tender Assistance" />
+        <h3>Tender Assistance and Bidding Support</h3>
+        <p>Professional services that guide businesses through the complex process of winning contracts from government and private organizations.</p>
+      </div>
+      <div class="card">
+        <img src="images/twelve.webp" alt="Vendor Registration" />
+        <h3>Vendor Registration (GeM, PSU, MSME, etc)</h3>
+        <p>Public Sector Undertakings (PSUs), and other entities. Key registrations include the Government e-Marketplace (GeM) for government contracts, Public Sector Undertaking (PSU) registration through individual portals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve -->
+  <section class="industries">
+    <h2>Industries We Serve</h2>
+    <div class="icons">
+      <div class="icon-item">
+        <img src="images/government-building.png" alt="Government" />
+        <h3>Government Projects</h3>
+      </div>
+      <div class="icon-item">
+        <img src="images/solar-panel.png" alt="Solar Energy" />
+        <h3>Solar Energy Solutions</h3>
+      </div>
+      <div class="icon-item">
+        <img src="images/audit.png" alt="Audit" />
+        <h3>Social And Financial Audits</h3>
+      </div>
+      <div class="icon-item">
+        <img src="images/outsourcing.png" alt="Outsourcing" />
+        <h3>Government Outsourcing</h3>
+      </div>
+      <div class="icon-item">
+        <img src="images/coordinator.png" alt="Management" />
+        <h3>Management</h3>
+      </div>
+      <div class="icon-item">
+        <img src="images/technical-support.png" alt="Education" />
+        <h3>Training And Skill Development</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What types of manpower do you supply?</h3>
+      <p>We provide skilled, semi-skilled, and unskilled labor for government projects including security, housekeeping, drivers, and IT staff.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you assist with government tenders?</h3>
+      <p>Yes! We offer end-to-end tender assistance, documentation, e-tendering, and vendor registration (GeM, PSU, MSME).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you handle solar energy projects?</h3>
+      <p>Absolutely. We manage solar panel tenders, installation, O&M, rooftop solar, and rural electrification.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do you ensure compliance in audits?</h3>
+      <p>We follow strict audit protocols and use trained professionals to ensure transparency and accuracy.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/nobglogo.png" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="our-work.html">Our Work</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@hopecare.in</p>
+        <p>📍 New Delhi, India</p>
+      </div>
+    </div>
+    <div class="request-form" id="contact-form">
+      <h3>Request a Callback</h3>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Name" required />
+        <input type="tel" placeholder="Mobile Number" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Address" required />
+        <input type="file" accept=".pdf,.doc,.docx" required />
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hope Care Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

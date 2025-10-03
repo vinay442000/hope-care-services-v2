@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work - Hope Care Services</title>
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Page-Specific Styles -->
+  <link rel="stylesheet" href="css/our-work.css" />
+  
+  <!-- Font Awesome (FIXED: removed extra spaces) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/nobglogo.png" alt="Hope Care Services Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-work.html" class="active">Our Work</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="search-box">
+          <input type="text" placeholder="Search projects..." id="searchInput" />
+          <button onclick="searchSite()"><i class="fas fa-search"></i></button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Toggle Button (Standardized) -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="projects-header">
+    <div class="header-content">
+      <h1 class="fade-up">Our Successful Projects</h1>
+      <p class="fade-up" style="--delay: 0.2s">Delivering excellence across government sectors with innovation, integrity, and impact.</p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="filter-tabs">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="manpower">Manpower</button>
+    <button class="filter-btn" data-filter="energy">Energy</button>
+    <button class="filter-btn" data-filter="audit">Audit</button>
+    <button class="filter-btn" data-filter="tender">Tender</button>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+    <div class="project-card" data-category="manpower">
+      <div class="card-image">
+        <img src="https://placehold.co/600x400/3498db/ffffff?text=Urban+Manpower" alt="Government Manpower Project" />
+        <div class="overlay">
+          <div class="overlay-content">
+            <a href="#" class="view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Manpower Supply for Urban Development</h3>
+        <p>Empowered urban transformation by deploying 500+ certified professionals — accelerating road, drainage, and public space development across 3 metropolitan zones.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="energy">
+      <div class="card-image">
+        <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Solar+Project" alt="Solar Installation" />
+        <div class="overlay">
+          <div class="overlay-content">
+            <a href="#" class="view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Solar Rooftop Project</h3>
+        <p>Harnessed clean energy for education — installed solar systems across 100 government schools, reducing carbon footprint and electricity costs by 40%.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="audit">
+      <div class="card-image">
+        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Social+Audit" alt="Social Audit" />
+        <div class="overlay">
+          <div class="overlay-content">
+            <a href="#" class="view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Social Audit for Rural Health Program</h3>
+        <p>Ensured transparency and accountability — audited 200+ rural health centers across 5 states, improving service delivery for over 500,000 beneficiaries.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="tender">
+      <div class="card-image">
+        <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Tender+Support" alt="Tender Support" />
+        <div class="overlay">
+          <div class="overlay-content">
+            <a href="#" class="view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Tender Assistance for Water Supply</h3>
+        <p>Secured vital infrastructure funding — guided 30+ agencies to win GeM tenders worth ₹120+ crores, ensuring clean water access for underserved communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievement Stats -->
+  <section class="achievement-stats">
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="500">0</span>+</div>
+      <div class="stat-label">Workers Deployed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="100">0</span></div>
+      <div class="stat-label">Schools Powered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="200">0</span>+</div>
+      <div class="stat-label">Centers Audited</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="30">0</span>+</div>
+      <div class="stat-label">Tenders Won</div>
+    </div>
+  </section>
+
+  <!-- Modal for Project Details -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-image">
+        <img src="" alt="Project Detail" id="modalImg" />
+      </div>
+      <div class="modal-text">
+        <h2 id="modalTitle">Project Title</h2>
+        <p id="modalDesc">Project description goes here...</p>
+        <div class="modal-meta">
+          <span><i class="fas fa-calendar"></i> Duration: 12 Months</span>
+          <span><i class="fas fa-rupee-sign"></i> Budget: ₹2.5 Crores</span>
+          <span><i class="fas fa-map-marker-alt"></i> Location: 5 States</span>
+        </div>
+        <a href="#" class="btn-download"><i class="fas fa-file-pdf"></i> Download Case Study</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/nobglogo.png" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="our-work.html">Our Work</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@hopecare.in</p>
+        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+      </div>
+    </div>
+    <div class="request-form" id="contact-form">
+      <h3>Request a Callback</h3>
+      <form id="callbackForm">
+        <input type="text" placeholder="Name" required />
+        <input type="tel" placeholder="Mobile Number" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Address" required />
+        <input type="file" accept=".pdf,.doc,.docx" />
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hope Care Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="js/script.js"></script>
+  
+  <!-- Page-Specific JS -->
+  <script src="js/our-work.js"></script>
+</body>
+</html>

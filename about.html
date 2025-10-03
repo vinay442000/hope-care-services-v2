@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Hope Care Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <!-- Font Awesome for mobile menu icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Hope Care Services Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="search-box">
+          <input type="text" placeholder="Search..." id="searchInput" />
+          <button onclick="searchSite()">🔍</button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>About Hope Care Services</h1>
+        <p>We are a trusted partner for government organizations, providing comprehensive manpower, audit, solar energy, and business support services. With a mission to empower public sector efficiency, we deliver reliable, compliant, and sustainable solutions across India.</p>
+        <a href="#why-choose-us" class="btn">Why Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="glass-card mv-card">
+          <h2>Our Mission</h2>
+          <p>To bridge the gap between government needs and efficient service delivery through skilled manpower, transparent audits, and renewable energy solutions.</p>
+        </div>
+        <div class="glass-card mv-card">
+          <h2>Our Vision</h2>
+          <p>To become the leading service provider for government projects in India, promoting sustainability, compliance, and innovation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us" class="why-us-section">
+    <div class="container">
+      <h2 class="section-title">Why Government Agencies Choose Us</h2>
+      <div class="grid grid-3">
+        <div class="glass-card">
+          <img src="images/industry-icons/government.png" alt="Government Compliant" class="icon-lg">
+          <h3>Govt. Compliant</h3>
+          <p>All our processes adhere to central & state government regulations and procurement policies.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/industry-icons/audit.png" alt="Transparent Audits" class="icon-lg">
+          <h3>Transparent Audits</h3>
+          <p>End-to-end audit trails with digital reporting for accountability and ease of inspection.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/industry-icons/solar.png" alt="Solar Solutions" class="icon-lg">
+          <h3>Solar Energy Experts</h3>
+          <p>Turnkey solar installations for government buildings — cost-efficient and eco-friendly.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/industry-icons/outsource.png" alt="Skilled Manpower" class="icon-lg">
+          <h3>Skilled Manpower</h3>
+          <p>Vetted, trained professionals deployed on demand — from clerical to technical roles.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/industry-icons/it.png" alt="IT & Digitalization" class="icon-lg">
+          <h3>IT & Digitalization</h3>
+          <p>Digitize workflows, records, and reporting systems for seamless public service delivery.</p>
+        </div>
+        <div class="glass-card">
+          <img src="images/industry-icons/education.png" alt="Training & Capacity Building" class="icon-lg">
+          <h3>Capacity Building</h3>
+          <p>We train government staff on new systems, compliance, and tech adoption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <h2 class="section-title">Our Impact in Numbers</h2>
+      <div class="grid grid-3">
+        <div class="stat-item glass-card">
+          <span class="stat-number" id="projects">0</span>
+          <span class="stat-label">Govt. Projects Delivered</span>
+        </div>
+        <div class="stat-item glass-card">
+          <span class="stat-number" id="personnel">0</span>
+          <span class="stat-label">Personnel Deployed</span>
+        </div>
+        <div class="stat-item glass-card">
+          <span class="stat-number" id="states">0</span>
+          <span class="stat-label">States Served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">What Our Partners Say</h2>
+      <div class="grid grid-2">
+        <div class="glass-card testimonial">
+          <p>“Hope Care’s audit team helped us streamline 12 district offices in record time. Their compliance reports were impeccable.”</p>
+          <div class="client">
+            <img src="images/service-5.jpg" alt="Rajesh Kumar">
+            <div>
+              <strong>Rajesh Kumar</strong><br>
+              <small>Director, State Panchayat Dept.</small>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card testimonial">
+          <p>“Their solar team installed 500kW across our schools with zero downtime. Maintenance support is prompt and professional.”</p>
+          <div class="client">
+            <img src="images/service-6.jpg" alt="Dr. Meena Patel">
+            <div>
+              <strong>Dr. Meena Patel</strong><br>
+              <small>Project Head, Education Dept.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/nobglogo.png" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="our-work.html">Our Work</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@hopecare.in</p>
+        <p>📍 New Delhi, India</p>
+      </div>
+    </div>
+    <div class="request-form" id="contact-form">
+      <h3>Request a Callback</h3>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Name" required />
+        <input type="tel" placeholder="Mobile Number" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Address" required />
+        <input type="file" accept=".pdf,.doc,.docx" required />
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hope Care Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

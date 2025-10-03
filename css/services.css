@@ -1,0 +1,480 @@
+/* =============
+   SERVICES PAGE - SPECIFIC STYLES
+   ============= */
+
+/* Add padding to body to prevent content from hiding under fixed header */
+body {
+  padding-top: 120px; /* Announcement bar (40px) + Header (80px) */
+}
+
+/* Hero Section */
+.services-header {
+  background: linear-gradient(120deg, var(--accent), var(--primary));
+  padding: 6rem 5% 4rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.03)"/></svg>');
+  background-size: cover;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation-delay: var(--delay, 0s);
+}
+
+/* Stats Banner */
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem 5%;
+  background: white;
+  text-align: center;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.03);
+}
+
+.stat-item {
+  padding: 1.5rem 1rem;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Service Tabs */
+.service-tabs-section {
+  padding: 2rem 5%;
+  background: #f8f9fa;
+}
+
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: white;
+  border: 2px solid #ddd;
+  color: var(--dark);
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 4rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(30, 30, 30, 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(52, 152, 219, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  transition: var(--transition);
+}
+
+.service-card:hover .card-icon {
+  transform: translateY(-5px) scale(1.1);
+  color: var(--accent);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  transition: var(--transition);
+}
+
+.service-card:hover h3 {
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-inquire {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-inquire:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  padding: 5rem 5% 3rem;
+  background: white;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 3rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pillar {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.05), rgba(44, 62, 80, 0.05));
+  border-radius: 15px;
+  transition: var(--transition);
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.pillar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.pillar p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* CTA Banner */
+.cta-banner {
+  padding: 5rem 5% 4rem;
+  background: linear-gradient(120deg, #2c3e50, #3498db);
+  text-align: center;
+  color: white;
+}
+
+.cta-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-download {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-download {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--secondary);
+}
+
+.btn-download:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: var(--transition);
+}
+
+.close:hover {
+  color: var(--accent);
+}
+
+#modalServiceTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  font-size: 1.8rem;
+}
+
+#inquiryForm {
+  display: grid;
+  gap: 1rem;
+}
+
+#inquiryForm input,
+#inquiryForm textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+#inquiryForm input:focus,
+#inquiryForm textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+#inquiryForm textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#inquiryForm button {
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+
+#inquiryForm button:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 110px; /* Adjusted for mobile */
+  }
+
+  .service-tabs {
+    overflow-x: auto;
+    padding: 1rem 0;
+    justify-content: flex-start;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+    min-width: 120px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-download {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}

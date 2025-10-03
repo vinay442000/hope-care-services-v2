@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Hope Care Services</title>
+  
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Page-Specific CSS -->
+  <link rel="stylesheet" href="css/services.css" />
+  
+  <!-- Font Awesome (FIXED: removed extra spaces) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Hope Care Services Logo" />
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="search-box">
+          <input type="text" placeholder="Search services..." id="searchInput" />
+          <button onclick="searchSite()"><i class="fas fa-search"></i></button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Toggle Button (Standardized) -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="services-header">
+    <div class="header-content">
+      <h1 class="fade-up">Our Comprehensive Services</h1>
+      <p class="fade-up" style="--delay: 0.2s">Trusted solutions for government and public sector projects — delivered with integrity, expertise, and impact.</p>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="5000">0</span>+</div>
+      <div class="stat-label">Staff Deployed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="200">0</span>+</div>
+      <div class="stat-label">Govt Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="98">0</span>%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span class="count" data-target="15">0</span>+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+  </section>
+
+  <!-- Service Tabs -->
+  <section class="service-tabs-section">
+    <div class="service-tabs">
+      <button class="tab-btn active" data-tab="all">All Services</button>
+      <button class="tab-btn" data-tab="manpower">Manpower</button>
+      <button class="tab-btn" data-tab="audit">Audit & Compliance</button>
+      <button class="tab-btn" data-tab="tender">Tender Services</button>
+      <button class="tab-btn" data-tab="solar">Solar Energy</button>
+      <button class="tab-btn" data-tab="support">Facility Support</button>
+      <button class="tab-btn" data-tab="consulting">Consulting</button>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <!-- Manpower -->
+    <div class="service-card" data-category="manpower">
+      <div class="card-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h3>Manpower Outsourcing</h3>
+      <p>Tailored workforce solutions — from expert engineers to support staff — deployed with precision to keep your public projects running seamlessly.</p>
+      <button class="btn-inquire" data-service="Manpower Outsourcing">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="manpower">
+      <div class="card-icon">
+        <i class="fas fa-hard-hat"></i>
+      </div>
+      <h3>Skilled & Contract Staffing</h3>
+      <p>Flexible staffing for short-term projects or long-term needs — including IT, technical, event, and administrative personnel.</p>
+      <button class="btn-inquire" data-service="Skilled & Contract Staffing">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="manpower">
+      <div class="card-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <h3>Training & Skill Development</h3>
+      <p>Customized training programs to upskill government staff and contractors — enhancing efficiency and service delivery.</p>
+      <button class="btn-inquire" data-service="Training & Skill Development">Request Quote</button>
+    </div>
+
+    <!-- Audit -->
+    <div class="service-card" data-category="audit">
+      <div class="card-icon">
+        <i class="fas fa-clipboard-check"></i>
+      </div>
+      <h3>Social Audits</h3>
+      <p>Ensuring transparency and accountability in government welfare schemes through rigorous field audits and community feedback.</p>
+      <button class="btn-inquire" data-service="Social Audits">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="audit">
+      <div class="card-icon">
+        <i class="fas fa-file-invoice-dollar"></i>
+      </div>
+      <h3>Financial Audits</h3>
+      <p>Detailed financial compliance audits to prevent leakage and ensure optimal utilization of public funds.</p>
+      <button class="btn-inquire" data-service="Financial Audits">Request Quote</button>
+    </div>
+
+    <!-- Tender -->
+    <div class="service-card" data-category="tender">
+      <div class="card-icon">
+        <i class="fas fa-file-contract"></i>
+      </div>
+      <h3>Tender Assistance</h3>
+      <p>End-to-end support for government e-tendering — from documentation to bid submission on GeM and other portals.</p>
+      <button class="btn-inquire" data-service="Tender Assistance">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="tender">
+      <div class="card-icon">
+        <i class="fas fa-building"></i>
+      </div>
+      <h3>Vendor Registration</h3>
+      <p>Streamlined registration on GeM, PSU, and MSME portals — helping you qualify for government contracts faster.</p>
+      <button class="btn-inquire" data-service="Vendor Registration">Request Quote</button>
+    </div>
+
+    <!-- Solar -->
+    <div class="service-card" data-category="solar">
+      <div class="card-icon">
+        <i class="fas fa-solar-panel"></i>
+      </div>
+      <h3>Solar Panel Installation</h3>
+      <p>End-to-end solar solutions — from design to installation — powering schools, hospitals, and villages with clean, reliable energy.</p>
+      <button class="btn-inquire" data-service="Solar Panel Installation">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="solar">
+      <div class="card-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h3>Solar O&M & Consultancy</h3>
+      <p>Ongoing operations, maintenance, and expert consultancy to maximize efficiency and ROI of your solar assets.</p>
+      <button class="btn-inquire" data-service="Solar O&M & Consultancy">Request Quote</button>
+    </div>
+
+    <!-- Facility Support -->
+    <div class="service-card" data-category="support">
+      <div class="card-icon">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h3>Office Administration</h3>
+      <p>Professional clerical, data entry, and back-office support to keep your operations running smoothly.</p>
+      <button class="btn-inquire" data-service="Office Administration">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="support">
+      <div class="card-icon">
+        <i class="fas fa-desktop"></i>
+      </div>
+      <h3>IT Helpdesk</h3>
+      <p>On-site or remote IT support, system administration, and troubleshooting for government offices and projects.</p>
+      <button class="btn-inquire" data-service="IT Helpdesk">Request Quote</button>
+    </div>
+
+    <!-- Consulting -->
+    <div class="service-card" data-category="consulting">
+      <div class="card-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h3>Outsourcing Strategy</h3>
+      <p>Custom consulting for SMEs and contractors to optimize outsourcing models and reduce operational costs.</p>
+      <button class="btn-inquire" data-service="Outsourcing Strategy">Request Quote</button>
+    </div>
+
+    <div class="service-card" data-category="consulting">
+      <div class="card-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <h3>Government Staff Training</h3>
+      <p>Specialized training modules for government employees to enhance digital literacy, compliance, and service delivery.</p>
+      <button class="btn-inquire" data-service="Government Staff Training">Request Quote</button>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <h2>Why Partner With Us?</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>Transparency</h3>
+        <p>Clear processes, real-time reporting, and full accountability in every engagement.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Reliability</h3>
+        <p>On-time delivery, quality assurance, and dedicated support — no matter the scale.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3>Impact</h3>
+        <p>We measure success by the positive change we create in communities and institutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>Ready to Partner with Us?</h2>
+    <p>Let’s build something great together.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-primary"><i class="fas fa-phone"></i> Request Callback</a>
+      <a href="mailto:info@hopecare.in" class="btn-secondary"><i class="fas fa-envelope"></i> Email Us</a>
+      <a href="#" class="btn-download"><i class="fas fa-file-pdf"></i> Download Brochure</a>
+    </div>
+  </section>
+
+  <!-- Inquiry Modal -->
+  <div class="modal" id="inquiryModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalServiceTitle">Request Quote</h2>
+      <form id="inquiryForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea placeholder="Tell us about your project or requirements"></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/nobglogo.png" alt="Logo" />
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="our-work.html">Our Work</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@hopecare.in</p>
+        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+      </div>
+    </div>
+    <div class="request-form" id="contact-form">
+      <h3>Request a Callback</h3>
+      <form id="callbackForm">
+        <input type="text" placeholder="Name" required />
+        <input type="tel" placeholder="Mobile Number" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Address" required />
+        <input type="file" accept=".pdf,.doc,.docx" />
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hope Care Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="js/script.js"></script>
+  
+  <!-- Page-Specific JS -->
+  <script src="js/services.js"></script>
+</body>
+</html>
