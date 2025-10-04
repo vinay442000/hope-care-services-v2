@@ -107,7 +107,7 @@ header {
 }
 
 /* Hero Section */
-.hero {
+/* .hero {
   position: relative;
   width: 100%;
   height: 80vh;
@@ -205,7 +205,182 @@ header {
 .prev-btn:hover, .next-btn:hover {
   background: var(--accent);
   color: white;
+} */
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
 }
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  margin-top: 120px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.slide-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: slideUp 1s ease-in-out;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Slide Controls */
+.slide-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.prev-btn, .next-btn {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--primary);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--accent), #ff6b00);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  
+  .slide {
+    /* On mobile, align content to bottom */
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 1rem 2rem; /* Add padding at bottom */
+  }
+  
+  .slide-content {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0; /* Rounded top corners only */
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    animation: slideUpMobile 0.8s ease-out;
+  }
+  
+  .slide-content h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .slide-content p {
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .btn {
+    /* padding: 0.8rem 1.5rem;
+    font-size: 0.95rem; */
+    padding: 4px 17px;
+        font-size: 13px;
+  }
+  
+  .slide-controls {
+    bottom: 10px;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile-specific animations */
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ensure proper stacking */
+.slide-content {
+  z-index: 5;
+}
+
+
 
 /* Services Grid */
 .services-grid {
@@ -460,9 +635,9 @@ footer {
     height: 60vh;
   }
 
-  .slide-content h1 {
+  /* .slide-content h1 {
     font-size: 2rem;
-  }
+  } */
 
   .grid-container {
     grid-template-columns: 1fr;
@@ -471,4 +646,22 @@ footer {
   .footer-content {
     flex-direction: column;
   }
+}
+
+@media screen and (max-width:425px) {
+  .announcement-bar > p {
+    font-size: 10px;
+  }
+  .logo{
+    z-index: 9999;
+    position: relative;
+  }
+  .navbar ul.active {
+    top: 119px;
+  }
+}
+
+.contact-hero{
+  margin-top: 40px;
+    text-align: center;
 }

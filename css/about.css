@@ -157,7 +157,7 @@ body {
 }
 
 .testimonial::before {
-  content: """;
+  content: "";
   font-size: 4rem;
   position: absolute;
   top: -15px;
@@ -275,7 +275,7 @@ footer {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--primary);
   font-size: 1.8rem;
   cursor: pointer;
   padding: 0.5rem;

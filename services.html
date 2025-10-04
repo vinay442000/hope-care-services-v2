@@ -19,7 +19,7 @@
 <body>
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+    <p>📞 Contact Us: 1800 5712935 | ✉️ Email: serviceshopecare@gmail.com</p>
   </div>
 
   <!-- Header -->
@@ -283,19 +283,23 @@
       </div>
       <div class="footer-contact">
         <h4>Contact Us</h4>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <!-- <p><i class="fas fa-phone"></i> +91 98765 43210</p>
         <p><i class="fas fa-envelope"></i> info@hopecare.in</p>
-        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p> -->
+        <p><i class="fas fa-phone"></i> 1800 5712935</p>
+        <p><i class="fas fa-envelope"></i> serviceshopecare@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 118, Parakhan, Darshan Nagar,<br> Ayodhya, Uttar Pradesh-224135 <br>
+          Sevices- Manpower Outsourcing Services,<br> Financial & Social Audit Services</p>
       </div>
     </div>
     <div class="request-form" id="contact-form">
       <h3>Request a Callback</h3>
-      <form id="callbackForm">
-        <input type="text" placeholder="Name" required />
-        <input type="tel" placeholder="Mobile Number" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Address" required />
-        <input type="file" accept=".pdf,.doc,.docx" />
+      <form id="callbackForm" action="https://formsubmit.co/serviceshopecare@gmail.com" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="tel" name="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="message" placeholder="Address" required />
+        <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/png,image/jpeg,image/jpg" required />
         <button type="submit">Submit Request</button>
       </form>
     </div>

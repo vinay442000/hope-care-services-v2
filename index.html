@@ -12,7 +12,7 @@
 <body>
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    <p>📞 Contact Us: +91 98765 43210 | ✉️ Email: info@hopecare.in</p>
+    <p>📞 Contact Us: 1800 5712935 | ✉️ Email: serviceshopecare@gmail.com</p>
   </div>
 
   <!-- Header -->
@@ -40,7 +40,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <!-- <section class="hero">
     <div class="slides">
       <div class="slide active">
         <img src="images/hero3.png" alt="Manpower Outsourcing" />
@@ -71,7 +71,39 @@
       <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
       <button class="next-btn" onclick="changeSlide(1)">❯</button>
     </div>
+  </section> -->
+
+  <!-- New Hero Section -->
+  <section class="hero">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('images/hero3.png');">
+        <div class="slide-content">
+          <h1>Empowering Government Projects</h1>
+          <p>Reliable manpower and outsourcing solutions for government sectors.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/hero2.png');">
+        <div class="slide-content">
+          <h1>Sustainable Solar Energy</h1>
+          <p>End-to-end solar solutions for public institutions and rural areas.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('images/hero1.png');">
+        <div class="slide-content">
+          <h1>Transparent Audits & Compliance</h1>
+          <p>Accurate social and financial audits for government agencies.</p>
+          <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide-controls">
+      <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+      <button class="next-btn" onclick="changeSlide(1)">❯</button>
+    </div>
   </section>
+  <!-- Section -->
 
   <!-- Services Grid -->
   <section class="services-grid">
@@ -208,19 +240,20 @@
       </div>
       <div class="footer-contact">
         <h4>Contact Us</h4>
-        <p>📞 +91 98765 43210</p>
-        <p>✉️ info@hopecare.in</p>
-        <p>📍 New Delhi, India</p>
+        <p>📞 1800 5712935</p>
+        <p>✉️ serviceshopecare@gmail.com</p>
+        <p>📍 118, Parakhan, Darshan Nagar,<br> Ayodhya, Uttar Pradesh-224135 <br>
+          Sevices- Manpower Outsourcing Services,<br> Financial & Social Audit Services</p>
       </div>
     </div>
     <div class="request-form" id="contact-form">
       <h3>Request a Callback</h3>
-      <form action="#" method="post" enctype="multipart/form-data">
-        <input type="text" placeholder="Name" required />
-        <input type="tel" placeholder="Mobile Number" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Address" required />
-        <input type="file" accept=".pdf,.doc,.docx" required />
+      <form action="https://formsubmit.co/serviceshopecare@gmail.com" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="tel" name="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="message" placeholder="Address" required />
+        <input type="file" name="attachment" accept=".pdf,.doc,.docx,image/png,image/jpeg,image/jpg" required />
         <button type="submit">Submit Request</button>
       </form>
     </div>
